@@ -1,0 +1,28 @@
+ #container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+ }
+
+ h1, h2, h3, h4 {
+    background-color: #32C15A; /* Light green */
+    color: #000; /* Black text */
+    border: 1px solid #D6A800; /* Dark goldenrod border */
+    padding: 10px;
+ }
+
+
+ a {
+    color: #2E8B57; /* Sea green */
+    text-decoration: none;
+ }
+
+
+ a:hover {
+    color: #228B22; /* Forest green */
+ }
+
+
+ a:visited {
+    color: #8A2BE2; /* Blue violet */
+ }
