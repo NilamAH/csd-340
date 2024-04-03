@@ -1,0 +1,60 @@
+ /* General styles */
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Ariel, sans-serif;
+ }
+
+ #container {
+    margin: 0 auto;  /* Center the Container */
+    width: 80%;  /* Adjust as needed */
+ }
+
+ h1 {
+    font-weight: 700;  /* Bold */
+ }
+
+ h3 {
+    font-weight: 500;  /* Medium */
+ }
+
+ ol, ul {
+    font-weight: 300;  /* Light */
+    padding: 10px; 
+}
+
+/* Left div styles */
+
+.left-div {
+    width: 45%;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding:10px;
+}
+
+ol, ul {
+    list-style: decimal inside;
+}
+
+/* Right div styles */
+.right-div {
+    width: 45%;
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+ul {
+    list-style: upper-roman inside;
+}
+
+/* Hover styles for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom div styles */
+.bottom-div {
+    float: right;
+    margin-bottom: 20px;
+}
