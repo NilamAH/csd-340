@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+      }
+    </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #333;
+      }
+      .gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .gallery img {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+      }
+      .gallery img:hover {
+        border-color: #333;
+      }
+      #display {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <div class="gallery">
+      <img src="cave.jpg" alt="Image 1" onclick="displayImage('cave1.jpg')">
+      <img src="cave1.jpg" alt="Image 2" onclick="displayImage('cave.jpg')">
+      <img src="ice.jpg" alt="Image 3" onclick="displayImage('ice1.jpg')">
+      <img src="ice1.jpg" alt="Image 4" onclick="displayImage('ice.jpg')">
+    </div>
+    <div id="display">
+      <p>Click on an image to see it displayed below:</p>
+      <img id="mainImage" src="" alt="Displayed Image" style="display:none; max-width: 100%;">
+    </div>
+  </body>
+</html>
