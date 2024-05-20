@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+       var books = [
+          "To Kill a Mockingbird",
+          "1984",
+          "The Great Gatsby",
+          "The Catcher in the Rye",
+          "The Hobbit",
+          "Fahrenheit 451",
+          "Pride and Prejudice",
+          "Harry Potter and the Sorcerer's Stone",
+          "The Lord of the Rings",
+          "The Book Thief"
+
+        ];
+
+        function displayTopToBottom() {
+            var displayArea = document.getElementById("bookList");
+            displayArea.innerHTML = "";
+            books.sort();
+            for (var i = 0; i < books.length; i++) {
+                displayArea.innerHTML += (i + 1) + ". " + books[i] + "<br>";
+            }
+        }
+
+        function displayBottomToTop() {
+            var displayArea = document.getElementById("bookList");
+            displayArea.innerHTML = "";
+            books.sort().reverse();
+            for (var i = 0; i < books.length; i++) {
+                displayArea.innerHTML += (books.length - i) + ". " + books[i] + "<br>";
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498DB;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980B9;
+        }
+        #bookList {
+            text-align: left;
+            margin-top: 10px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        #learnedList {
+            text-align: left;
+            padding-left: 20px;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #3498DB;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+    <div class="container">
+        <div class="box">
+            <h2>Top 10 Favorite Books</h2>
+            <button onclick="displayTopToBottom()">Top to Bottom</button>
+            <button onclick="displayBottomToTop()">Bottom to Top</button>
+            <div id="bookList"></div>
+        </div>
+        <div class="box" id="learnedBox">
+            <h2>5 Things I've Learned Since the Course Started</h2>
+            <ol id="learnedList">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ol>
+        </div>
+    </div>
+    <a href="index.html">back to Landing Page</a>
+</body>
+</html>
