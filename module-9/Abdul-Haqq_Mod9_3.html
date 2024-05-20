@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+      Professor Sue Sampson
+       Assignment 9.3
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        var firstVariableValue = "planetary";
+        var secondVariableValue = "extraterrestrial";
+        var thirdVariableValue = "resistance";
+        var fourthVariableValue = "independence";
+
+        function replaceText(spanId, variableValue) {
+            document.getElementById(spanId).innerHTML = variableValue;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    <p>This is just a sample text to demonstrate the functionality of JavaScript.</p>
+    <p>JavaScript can dynamically change the content of HTML elements on a web page.</p>
+    <p>In this example, we have created four buttons, each associated with a span tag containing a blank line.</p>
+    <p>When you click on any button, it will replace the underscore in the corresponding span tag with a predefined word.</p>
+    <p>So go ahead, click on the buttons and see the magic!</p>
+
+    <p>
+        <span id="word1">_________</span>
+        <button type="button" onclick="replaceText('word1', firstVariableValue)">aerial</button>
+
+        <span id="word2">_________</span>
+        <button type="button" onclick="replaceText('word2', secondVariableValue)">extraterrestrial</button>
+
+        <span id="word3">_________</span>
+        <button type="button" onclick="replaceText('word3', thirdVariableValue)">resistance</button>
+
+        <span id="word4">_________</span>
+        <button type="button" onclick="replaceText('word4', fourthVariableValue)">independence</button>
+    </p>
+</body>
+
+</html>
